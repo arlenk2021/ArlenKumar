@@ -41,6 +41,11 @@
 	<!-- Base Stylesheet -->
 	<link rel="stylesheet" href="styles.css">
 	
+	<!-- GSAP & Lenis for smooth scrolling -->
+	<script src="https://cdn.jsdelivr.net/npm/lenis@1.0.42/dist/lenis.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+	
 	<!-- Structured Data -->
 	<script type="application/ld+json">
 	{
@@ -69,9 +74,61 @@
 			--sf-cloud: #00A1E0;
 		}
 
+		/* Smooth scrolling base */
+		html.lenis, html.lenis body {
+			height: auto;
+		}
+
+		.lenis.lenis-smooth {
+			scroll-behavior: auto !important;
+		}
+
+		.lenis.lenis-smooth [data-lenis-prevent] {
+			overscroll-behavior: contain;
+		}
+
+		.lenis.lenis-stopped {
+			overflow: hidden;
+		}
+
+		.lenis.lenis-scrolling iframe {
+			pointer-events: none;
+		}
+
 		.llms-page {
 			min-height: 100vh;
 			background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+		}
+
+		/* Scroll animations */
+		.fade-in {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+
+		.fade-in.visible {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		.slide-up {
+			opacity: 0;
+			transform: translateY(50px);
+		}
+
+		.scale-in {
+			opacity: 0;
+			transform: scale(0.95);
+		}
+
+		.slide-left {
+			opacity: 0;
+			transform: translateX(-30px);
+		}
+
+		.slide-right {
+			opacity: 0;
+			transform: translateX(30px);
 		}
 
 		/* Top banner */
@@ -685,14 +742,14 @@
 			🚀 <a href="https://github.com/arlenk2021/FreeLLMSTxTGenerator" target="_blank">Open Source Project</a> - Help us build the best free LLMs.txt generator! Contributions welcome! ❤️
 		</div>
 
-		<section class="llms-hero">
-			<div class="llms-hero-badge">✨ Powered by AI</div>
-			<h1>Generate <span>llms.txt</span> Instantly</h1>
-			<p class="subtitle">
+		<section class="llms-hero" id="hero">
+			<div class="llms-hero-badge fade-in">✨ Powered by AI</div>
+			<h1 class="fade-in">Generate <span>llms.txt</span> Instantly</h1>
+			<p class="subtitle fade-in">
 				Enter any website URL and get an LLM-friendly documentation file. 
 				Automatically crawls sitemaps and pages.
 			</p>
-			<div class="what-is-section">
+			<div class="what-is-section fade-in">
 				<h3>📄 What is llms.txt?</h3>
 				<p>
 					<strong>llms.txt</strong> is a proposed standard (similar to robots.txt) that helps Large Language Models (LLMs) like ChatGPT, Claude, and Gemini understand your website's structure and content. It provides AI-readable documentation that improves how AI systems cite and reference your content for better Generative Engine Optimization (GEO).
@@ -701,7 +758,7 @@
 		</section>
 
 		<div class="llms-container">
-			<div class="generator-card">
+			<div class="generator-card scale-in" id="generator">
 				<form id="generateForm">
 					<div class="form-group">
 						<label>Website URL</label>
@@ -772,7 +829,7 @@
 					</div>
 				</div>
 
-				<div class="opensource-section">
+				<div class="opensource-section slide-up" id="opensource">
 					<h3>🌟 Open Source Project</h3>
 					<p>
 						This is a free, open-source tool to help websites become more accessible to Large Language Models. 
@@ -791,7 +848,7 @@
 			</div>
 		</div>
 
-		<footer class="llms-footer">
+		<footer class="llms-footer slide-up" id="footer">
 			<h3>🌟 Help Build the Future of AI-Readable Web</h3>
 			<p>
 				This open-source project helps websites become more accessible to Large Language Models. 
@@ -817,6 +874,128 @@
 	</div>
 
 	<script>
+		// Initialize Lenis smooth scrolling
+		const lenis = new Lenis({
+			duration: 1.2,
+			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+			orientation: 'vertical',
+			gestureOrientation: 'vertical',
+			smoothWheel: true,
+			wheelMultiplier: 1,
+			touchMultiplier: 2,
+			infinite: false,
+		});
+
+		// Integrate Lenis with GSAP ScrollTrigger
+		lenis.on('scroll', ScrollTrigger.update);
+
+		gsap.ticker.add((time) => {
+			lenis.raf(time * 1000);
+		});
+		gsap.ticker.lagSmoothing(0);
+
+		// Animation on scroll
+		function raf(time) {
+			lenis.raf(time);
+			requestAnimationFrame(raf);
+		}
+		requestAnimationFrame(raf);
+
+		// Register GSAP plugins
+		gsap.registerPlugin(ScrollTrigger);
+
+		// Hero animations - fade in on load
+		gsap.fromTo('.llms-hero .fade-in', 
+			{ opacity: 0, y: 40 },
+			{ 
+				opacity: 1, 
+				y: 0, 
+				duration: 0.8, 
+				stagger: 0.15,
+				ease: 'power3.out',
+				delay: 0.2
+			}
+		);
+
+		// Generator card animation
+		gsap.fromTo('#generator', 
+			{ opacity: 0, scale: 0.95, y: 30 },
+			{ 
+				opacity: 1, 
+				scale: 1, 
+				y: 0,
+				duration: 0.8,
+				ease: 'power3.out',
+				scrollTrigger: {
+					trigger: '#generator',
+					start: 'top 85%',
+					toggleActions: 'play none none none'
+				}
+			}
+		);
+
+		// Open source section animation
+		gsap.fromTo('#opensource', 
+			{ opacity: 0, y: 50 },
+			{ 
+				opacity: 1, 
+				y: 0,
+				duration: 0.8,
+				ease: 'power3.out',
+				scrollTrigger: {
+					trigger: '#opensource',
+					start: 'top 85%',
+					toggleActions: 'play none none none'
+				}
+			}
+		);
+
+		// Footer animation
+		gsap.fromTo('#footer', 
+			{ opacity: 0, y: 50 },
+			{ 
+				opacity: 1, 
+				y: 0,
+				duration: 0.8,
+				ease: 'power3.out',
+				scrollTrigger: {
+					trigger: '#footer',
+					start: 'top 90%',
+					toggleActions: 'play none none none'
+				}
+			}
+		);
+
+		// Parallax effect on hero
+		gsap.to('.llms-hero', {
+			backgroundPositionY: '30%',
+			ease: 'none',
+			scrollTrigger: {
+				trigger: '.llms-hero',
+				start: 'top top',
+				end: 'bottom top',
+				scrub: true
+			}
+		});
+
+		// Stats counter animation
+		function animateCounter(element, target) {
+			gsap.fromTo(element, 
+				{ innerText: 0 },
+				{
+					innerText: target,
+					duration: 1.5,
+					ease: 'power2.out',
+					snap: { innerText: 1 },
+					scrollTrigger: {
+						trigger: element,
+						start: 'top 85%',
+						toggleActions: 'play none none none'
+					}
+				}
+			);
+		}
+
 		let currentOutput = '';
 
 		// API endpoint - change this to your deployed backend URL
@@ -865,6 +1044,17 @@
 					).join('');
 					
 					results.classList.add('visible');
+					
+					// Animate results in
+					gsap.fromTo(results, 
+						{ opacity: 0, y: 30 },
+						{ opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }
+					);
+					
+					// Smooth scroll to results
+					setTimeout(() => {
+						lenis.scrollTo(results, { offset: -100, duration: 1.2 });
+					}, 100);
 				} else {
 					errorDiv.textContent = data.error || 'Failed to generate llms.txt';
 					errorDiv.classList.add('visible');
