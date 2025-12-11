@@ -1,0 +1,22 @@
+{
+  "name": "arlenkumar-website",
+  "version": "1.0.0",
+  "description": "Personal website for Arlen Kumar - Co-founder of Wrodium",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step required for static site'",
+    "deploy": "vercel --prod",
+    "logs": "vercel logs",
+    "logs:tail": "vercel logs --follow"
+  },
+  "keywords": [
+    "website",
+    "portfolio",
+    "wrodium",
+    "ai-search"
+  ],
+  "author": "Arlen Kumar",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
