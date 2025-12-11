@@ -100,35 +100,10 @@
 			background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
 		}
 
-		/* Scroll animations */
-		.fade-in {
-			opacity: 0;
-			transform: translateY(30px);
-		}
-
-		.fade-in.visible {
+		/* Scroll animations - default visible, GSAP will animate */
+		.fade-in, .slide-up, .scale-in, .slide-left, .slide-right {
 			opacity: 1;
-			transform: translateY(0);
-		}
-
-		.slide-up {
-			opacity: 0;
-			transform: translateY(50px);
-		}
-
-		.scale-in {
-			opacity: 0;
-			transform: scale(0.95);
-		}
-
-		.slide-left {
-			opacity: 0;
-			transform: translateX(-30px);
-		}
-
-		.slide-right {
-			opacity: 0;
-			transform: translateX(30px);
+			transform: none;
 		}
 
 		/* Top banner */
@@ -874,127 +849,128 @@
 	</div>
 
 	<script>
-		// Initialize Lenis smooth scrolling
-		const lenis = new Lenis({
-			duration: 1.2,
-			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-			orientation: 'vertical',
-			gestureOrientation: 'vertical',
-			smoothWheel: true,
-			wheelMultiplier: 1,
-			touchMultiplier: 2,
-			infinite: false,
-		});
+		// Wait for DOM and libraries to load
+		document.addEventListener('DOMContentLoaded', function() {
+			// Initialize Lenis smooth scrolling (with fallback)
+			let lenis = null;
+			try {
+				if (typeof Lenis !== 'undefined') {
+					lenis = new Lenis({
+						duration: 1.2,
+						easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+						orientation: 'vertical',
+						gestureOrientation: 'vertical',
+						smoothWheel: true,
+						wheelMultiplier: 1,
+						touchMultiplier: 2,
+						infinite: false,
+					});
 
-		// Integrate Lenis with GSAP ScrollTrigger
-		lenis.on('scroll', ScrollTrigger.update);
-
-		gsap.ticker.add((time) => {
-			lenis.raf(time * 1000);
-		});
-		gsap.ticker.lagSmoothing(0);
-
-		// Animation on scroll
-		function raf(time) {
-			lenis.raf(time);
-			requestAnimationFrame(raf);
-		}
-		requestAnimationFrame(raf);
-
-		// Register GSAP plugins
-		gsap.registerPlugin(ScrollTrigger);
-
-		// Hero animations - fade in on load
-		gsap.fromTo('.llms-hero .fade-in', 
-			{ opacity: 0, y: 40 },
-			{ 
-				opacity: 1, 
-				y: 0, 
-				duration: 0.8, 
-				stagger: 0.15,
-				ease: 'power3.out',
-				delay: 0.2
-			}
-		);
-
-		// Generator card animation
-		gsap.fromTo('#generator', 
-			{ opacity: 0, scale: 0.95, y: 30 },
-			{ 
-				opacity: 1, 
-				scale: 1, 
-				y: 0,
-				duration: 0.8,
-				ease: 'power3.out',
-				scrollTrigger: {
-					trigger: '#generator',
-					start: 'top 85%',
-					toggleActions: 'play none none none'
-				}
-			}
-		);
-
-		// Open source section animation
-		gsap.fromTo('#opensource', 
-			{ opacity: 0, y: 50 },
-			{ 
-				opacity: 1, 
-				y: 0,
-				duration: 0.8,
-				ease: 'power3.out',
-				scrollTrigger: {
-					trigger: '#opensource',
-					start: 'top 85%',
-					toggleActions: 'play none none none'
-				}
-			}
-		);
-
-		// Footer animation
-		gsap.fromTo('#footer', 
-			{ opacity: 0, y: 50 },
-			{ 
-				opacity: 1, 
-				y: 0,
-				duration: 0.8,
-				ease: 'power3.out',
-				scrollTrigger: {
-					trigger: '#footer',
-					start: 'top 90%',
-					toggleActions: 'play none none none'
-				}
-			}
-		);
-
-		// Parallax effect on hero
-		gsap.to('.llms-hero', {
-			backgroundPositionY: '30%',
-			ease: 'none',
-			scrollTrigger: {
-				trigger: '.llms-hero',
-				start: 'top top',
-				end: 'bottom top',
-				scrub: true
-			}
-		});
-
-		// Stats counter animation
-		function animateCounter(element, target) {
-			gsap.fromTo(element, 
-				{ innerText: 0 },
-				{
-					innerText: target,
-					duration: 1.5,
-					ease: 'power2.out',
-					snap: { innerText: 1 },
-					scrollTrigger: {
-						trigger: element,
-						start: 'top 85%',
-						toggleActions: 'play none none none'
+					// Integrate Lenis with GSAP ScrollTrigger
+					if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+						lenis.on('scroll', ScrollTrigger.update);
+						gsap.ticker.add((time) => {
+							lenis.raf(time * 1000);
+						});
+						gsap.ticker.lagSmoothing(0);
 					}
+
+					// Animation on scroll
+					function raf(time) {
+						lenis.raf(time);
+						requestAnimationFrame(raf);
+					}
+					requestAnimationFrame(raf);
 				}
-			);
-		}
+			} catch (e) {
+				console.log('Lenis not available, using native scroll');
+			}
+
+			// GSAP Animations (with fallback)
+			if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+				gsap.registerPlugin(ScrollTrigger);
+
+				// Hero animations - fade in on load
+				gsap.fromTo('.llms-hero .fade-in', 
+					{ opacity: 0, y: 40 },
+					{ 
+						opacity: 1, 
+						y: 0, 
+						duration: 0.8, 
+						stagger: 0.15,
+						ease: 'power3.out',
+						delay: 0.2
+					}
+				);
+
+				// Generator card animation
+				gsap.fromTo('#generator', 
+					{ opacity: 0, scale: 0.95, y: 30 },
+					{ 
+						opacity: 1, 
+						scale: 1, 
+						y: 0,
+						duration: 0.8,
+						ease: 'power3.out',
+						scrollTrigger: {
+							trigger: '#generator',
+							start: 'top 85%',
+							toggleActions: 'play none none none'
+						}
+					}
+				);
+
+				// Open source section animation
+				gsap.fromTo('#opensource', 
+					{ opacity: 0, y: 50 },
+					{ 
+						opacity: 1, 
+						y: 0,
+						duration: 0.8,
+						ease: 'power3.out',
+						scrollTrigger: {
+							trigger: '#opensource',
+							start: 'top 85%',
+							toggleActions: 'play none none none'
+						}
+					}
+				);
+
+				// Footer animation
+				gsap.fromTo('#footer', 
+					{ opacity: 0, y: 50 },
+					{ 
+						opacity: 1, 
+						y: 0,
+						duration: 0.8,
+						ease: 'power3.out',
+						scrollTrigger: {
+							trigger: '#footer',
+							start: 'top 90%',
+							toggleActions: 'play none none none'
+						}
+					}
+				);
+
+				// Parallax effect on hero
+				gsap.to('.llms-hero', {
+					backgroundPositionY: '30%',
+					ease: 'none',
+					scrollTrigger: {
+						trigger: '.llms-hero',
+						start: 'top top',
+						end: 'bottom top',
+						scrub: true
+					}
+				});
+			} else {
+				// Fallback: just show everything
+				document.querySelectorAll('.fade-in, .scale-in, .slide-up, .slide-left, .slide-right').forEach(el => {
+					el.style.opacity = '1';
+					el.style.transform = 'none';
+				});
+			}
+		});
 
 		let currentOutput = '';
 
@@ -1053,7 +1029,11 @@
 					
 					// Smooth scroll to results
 					setTimeout(() => {
-						lenis.scrollTo(results, { offset: -100, duration: 1.2 });
+						if (typeof lenis !== 'undefined' && lenis) {
+							lenis.scrollTo(results, { offset: -100, duration: 1.2 });
+						} else {
+							results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+						}
 					}, 100);
 				} else {
 					errorDiv.textContent = data.error || 'Failed to generate llms.txt';
