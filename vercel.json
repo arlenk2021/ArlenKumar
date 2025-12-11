@@ -119,6 +119,10 @@
     {
       "source": "/contact",
       "destination": "/contact.html"
+    },
+    {
+      "source": "/llms-generator",
+      "destination": "/llms-generator.html"
     }
   ]
 }
