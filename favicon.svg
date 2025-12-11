@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background squircle -->
+  <rect x="32" y="32" width="448" height="448" rx="120" ry="120" fill="#020617" />
+
+  <!-- Gradient ring -->
+  <defs>
+    <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e" />
+      <stop offset="50%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+  </defs>
+  <circle cx="256" cy="256" r="170" fill="none" stroke="url(#ringGradient)" stroke-width="26" />
+
+  <!-- Letter A -->
+  <text
+    x="50%"
+    y="50%"
+    text-anchor="middle"
+    dominant-baseline="central"
+    font-family="system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif"
+    font-weight="800"
+    font-size="220"
+    fill="#f9fafb"
+  >
+    A
+  </text>
+</svg>
