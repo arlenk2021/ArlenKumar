@@ -3,196 +3,625 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>LLMs.txt Generator | Arlen Kumar</title>
-	<meta name="description" content="Generate llms.txt files instantly for any website.">
+	<title>LLMs.txt Generator - Get AI Visibility for Your Website | Arlen Kumar</title>
+	<meta name="description" content="Generate llms.txt files instantly. Help ChatGPT, Claude, Gemini & Perplexity understand and cite your content. Free GEO tool.">
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 	<style>
 		* { margin: 0; padding: 0; box-sizing: border-box; }
+		
 		body {
 			font-family: 'Inter', sans-serif;
-			background: #f5f5f5;
+			background: #0a0a0a;
+			color: #fff;
 			min-height: 100vh;
+			overflow-x: hidden;
 		}
-		.header {
-			background: linear-gradient(135deg, #032D60 0%, #0176D3 100%);
-			padding: 20px;
-			text-align: center;
+
+		/* Animated gradient background */
+		.bg-gradient {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+			z-index: -2;
 		}
-		.header h1 {
-			color: white;
-			font-size: 24px;
-			margin-bottom: 8px;
+
+		.bg-glow {
+			position: fixed;
+			top: -50%;
+			left: -50%;
+			width: 200%;
+			height: 200%;
+			background: radial-gradient(circle at 30% 30%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+						radial-gradient(circle at 70% 70%, rgba(168, 85, 247, 0.1) 0%, transparent 50%);
+			animation: pulse 8s ease-in-out infinite;
+			z-index: -1;
 		}
-		.header p {
-			color: rgba(255,255,255,0.9);
-			font-size: 14px;
+
+		@keyframes pulse {
+			0%, 100% { opacity: 0.5; transform: scale(1); }
+			50% { opacity: 1; transform: scale(1.1); }
 		}
+
+		/* Navigation */
 		.nav {
-			background: #032D60;
-			padding: 12px 20px;
+			background: rgba(10, 10, 10, 0.8);
+			backdrop-filter: blur(20px);
+			border-bottom: 1px solid rgba(255,255,255,0.1);
+			padding: 16px 24px;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 100;
 			display: flex;
-			gap: 20px;
+			gap: 24px;
 			justify-content: center;
 		}
+
 		.nav a {
-			color: white;
+			color: rgba(255,255,255,0.7);
 			text-decoration: none;
 			font-size: 14px;
+			font-weight: 500;
+			transition: color 0.3s;
 		}
-		.nav a:hover { text-decoration: underline; }
-		.container {
+
+		.nav a:hover, .nav a.active { color: #fff; }
+
+		/* Hero Section */
+		.hero {
+			padding: 140px 24px 80px;
+			text-align: center;
+			max-width: 900px;
+			margin: 0 auto;
+		}
+
+		.badge {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			padding: 8px 16px;
+			background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(168, 85, 247, 0.2));
+			border: 1px solid rgba(255,255,255,0.2);
+			border-radius: 100px;
+			font-size: 13px;
+			font-weight: 500;
+			margin-bottom: 24px;
+			animation: fadeInUp 0.6s ease;
+		}
+
+		.badge::before { content: '🚀'; }
+
+		.hero h1 {
+			font-size: clamp(36px, 6vw, 64px);
+			font-weight: 800;
+			line-height: 1.1;
+			margin-bottom: 20px;
+			animation: fadeInUp 0.6s ease 0.1s backwards;
+		}
+
+		.hero h1 .gradient {
+			background: linear-gradient(135deg, #3b82f6 0%, #a855f7 50%, #ec4899 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+		}
+
+		.hero .subtitle {
+			font-size: 18px;
+			color: rgba(255,255,255,0.7);
 			max-width: 600px;
-			margin: 40px auto;
-			padding: 0 20px;
+			margin: 0 auto 40px;
+			line-height: 1.6;
+			animation: fadeInUp 0.6s ease 0.2s backwards;
 		}
+
+		@keyframes fadeInUp {
+			from { opacity: 0; transform: translateY(20px); }
+			to { opacity: 1; transform: translateY(0); }
+		}
+
+		/* Info Cards */
+		.cards-section {
+			padding: 0 24px 60px;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		.cards-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			gap: 20px;
+		}
+
 		.card {
-			background: white;
-			border-radius: 12px;
-			padding: 30px;
-			box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+			background: rgba(255,255,255,0.03);
+			border: 1px solid rgba(255,255,255,0.1);
+			border-radius: 16px;
+			padding: 28px;
+			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+			animation: fadeInUp 0.6s ease backwards;
 		}
-		.form-group { margin-bottom: 20px; }
-		label {
+
+		.card:nth-child(1) { animation-delay: 0.3s; }
+		.card:nth-child(2) { animation-delay: 0.4s; }
+		.card:nth-child(3) { animation-delay: 0.5s; }
+		.card:nth-child(4) { animation-delay: 0.6s; }
+
+		.card:hover {
+			transform: translateY(-8px);
+			border-color: rgba(168, 85, 247, 0.5);
+			background: rgba(255,255,255,0.05);
+			box-shadow: 0 20px 40px rgba(168, 85, 247, 0.1);
+		}
+
+		.card-icon {
+			font-size: 32px;
+			margin-bottom: 16px;
+		}
+
+		.card h3 {
+			font-size: 18px;
+			font-weight: 700;
+			margin-bottom: 10px;
+		}
+
+		.card p {
+			font-size: 14px;
+			color: rgba(255,255,255,0.6);
+			line-height: 1.6;
+		}
+
+		/* Generator Section */
+		.generator-section {
+			padding: 60px 24px;
+			max-width: 700px;
+			margin: 0 auto;
+		}
+
+		.generator-card {
+			background: rgba(255,255,255,0.05);
+			border: 1px solid rgba(255,255,255,0.1);
+			border-radius: 24px;
+			padding: 40px;
+			animation: fadeInUp 0.6s ease 0.7s backwards;
+		}
+
+		.generator-header {
+			text-align: center;
+			margin-bottom: 32px;
+		}
+
+		.generator-header h2 {
+			font-size: 28px;
+			font-weight: 700;
+			margin-bottom: 8px;
+		}
+
+		.generator-header p {
+			color: rgba(255,255,255,0.6);
+			font-size: 15px;
+		}
+
+		.form-group { margin-bottom: 24px; }
+
+		.form-group label {
 			display: block;
 			font-weight: 600;
-			margin-bottom: 8px;
-			color: #333;
+			margin-bottom: 10px;
+			font-size: 14px;
 		}
+
+		.input-wrapper {
+			position: relative;
+		}
+
+		.input-wrapper::before {
+			content: '🌐';
+			position: absolute;
+			left: 16px;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: 18px;
+		}
+
 		input[type="text"] {
 			width: 100%;
-			padding: 14px;
+			padding: 16px 16px 16px 48px;
 			font-size: 16px;
-			border: 2px solid #ddd;
-			border-radius: 8px;
 			font-family: inherit;
+			background: rgba(255,255,255,0.05);
+			border: 2px solid rgba(255,255,255,0.1);
+			border-radius: 12px;
+			color: #fff;
+			transition: all 0.3s;
 		}
+
 		input[type="text"]:focus {
 			outline: none;
-			border-color: #0176D3;
+			border-color: #a855f7;
+			background: rgba(168, 85, 247, 0.1);
 		}
-		.btn {
+
+		input[type="text"]::placeholder {
+			color: rgba(255,255,255,0.4);
+		}
+
+		.btn-generate {
 			width: 100%;
-			padding: 14px;
+			padding: 18px;
 			font-size: 16px;
-			font-weight: 600;
-			color: white;
-			background: #0176D3;
+			font-weight: 700;
+			font-family: inherit;
+			color: #fff;
+			background: linear-gradient(135deg, #3b82f6 0%, #a855f7 100%);
 			border: none;
-			border-radius: 8px;
+			border-radius: 12px;
 			cursor: pointer;
+			transition: all 0.3s;
+			position: relative;
+			overflow: hidden;
 		}
-		.btn:hover { background: #015bb5; }
-		.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+		.btn-generate::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+			transition: 0.5s;
+		}
+
+		.btn-generate:hover::before {
+			left: 100%;
+		}
+
+		.btn-generate:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 10px 30px rgba(168, 85, 247, 0.4);
+		}
+
+		.btn-generate:disabled {
+			opacity: 0.6;
+			cursor: not-allowed;
+			transform: none;
+		}
+
 		.error {
-			background: #fee;
-			border: 1px solid #fcc;
-			color: #c00;
-			padding: 12px;
-			border-radius: 8px;
+			background: rgba(239, 68, 68, 0.1);
+			border: 1px solid rgba(239, 68, 68, 0.3);
+			color: #f87171;
+			padding: 14px;
+			border-radius: 10px;
 			margin-top: 16px;
 			display: none;
+			font-size: 14px;
 		}
+
+		/* Results */
 		.results {
-			margin-top: 24px;
+			margin-top: 32px;
 			display: none;
+			animation: fadeInUp 0.5s ease;
 		}
+
 		.stats {
 			display: flex;
 			gap: 16px;
-			margin-bottom: 16px;
+			margin-bottom: 20px;
 		}
+
 		.stat {
 			flex: 1;
-			background: #f0f7ff;
-			padding: 16px;
-			border-radius: 8px;
+			background: rgba(59, 130, 246, 0.1);
+			border: 1px solid rgba(59, 130, 246, 0.2);
+			padding: 20px;
+			border-radius: 12px;
 			text-align: center;
 		}
+
 		.stat-value {
-			font-size: 24px;
-			font-weight: 700;
-			color: #0176D3;
+			font-size: 32px;
+			font-weight: 800;
+			background: linear-gradient(135deg, #3b82f6, #a855f7);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
 		}
+
 		.stat-label {
 			font-size: 12px;
-			color: #666;
+			color: rgba(255,255,255,0.5);
 			margin-top: 4px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
 		}
+
 		.output {
-			background: #f9f9f9;
-			border: 1px solid #ddd;
-			border-radius: 8px;
+			background: rgba(0,0,0,0.3);
+			border: 1px solid rgba(255,255,255,0.1);
+			border-radius: 12px;
 			overflow: hidden;
 		}
+
 		.output-header {
-			background: #eee;
-			padding: 12px 16px;
+			background: rgba(255,255,255,0.05);
+			padding: 14px 20px;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			border-bottom: 1px solid #ddd;
+			border-bottom: 1px solid rgba(255,255,255,0.1);
 		}
-		.output-header span { font-weight: 600; }
+
+		.output-header span {
+			font-weight: 600;
+			font-size: 14px;
+		}
+
 		.output-actions { display: flex; gap: 8px; }
+
 		.output-actions button {
-			padding: 6px 12px;
+			padding: 8px 16px;
 			font-size: 13px;
-			border: 1px solid #ddd;
-			background: white;
-			border-radius: 4px;
+			font-weight: 600;
+			font-family: inherit;
+			border: 1px solid rgba(255,255,255,0.2);
+			background: transparent;
+			color: #fff;
+			border-radius: 6px;
 			cursor: pointer;
+			transition: all 0.3s;
 		}
-		.output-actions button:hover { background: #f0f0f0; }
+
+		.output-actions button:hover {
+			background: rgba(255,255,255,0.1);
+			border-color: #a855f7;
+		}
+
 		.output-content {
-			padding: 16px;
-			max-height: 400px;
+			padding: 20px;
+			max-height: 350px;
 			overflow-y: auto;
 		}
+
 		.output-content pre {
-			font-family: monospace;
+			font-family: 'SF Mono', Monaco, monospace;
 			font-size: 13px;
+			color: rgba(255,255,255,0.8);
 			white-space: pre-wrap;
 			word-break: break-word;
+			line-height: 1.6;
 		}
-		.github-link {
+
+		/* Context Section */
+		.context-section {
+			padding: 80px 24px;
+			max-width: 900px;
+			margin: 0 auto;
+		}
+
+		.context-header {
 			text-align: center;
-			margin-top: 24px;
-			padding-top: 24px;
-			border-top: 1px solid #eee;
+			margin-bottom: 48px;
 		}
-		.github-link a {
-			color: #0176D3;
+
+		.context-header h2 {
+			font-size: 32px;
+			font-weight: 800;
+			margin-bottom: 16px;
+		}
+
+		.context-header p {
+			color: rgba(255,255,255,0.6);
+			font-size: 16px;
+			max-width: 600px;
+			margin: 0 auto;
+		}
+
+		.feature-list {
+			display: grid;
+			gap: 24px;
+		}
+
+		.feature-item {
+			display: flex;
+			gap: 20px;
+			padding: 24px;
+			background: rgba(255,255,255,0.03);
+			border: 1px solid rgba(255,255,255,0.08);
+			border-radius: 16px;
+			transition: all 0.3s;
+		}
+
+		.feature-item:hover {
+			background: rgba(255,255,255,0.05);
+			border-color: rgba(59, 130, 246, 0.3);
+		}
+
+		.feature-icon {
+			font-size: 28px;
+			flex-shrink: 0;
+		}
+
+		.feature-content h4 {
+			font-size: 16px;
+			font-weight: 700;
+			margin-bottom: 8px;
+		}
+
+		.feature-content p {
+			font-size: 14px;
+			color: rgba(255,255,255,0.6);
+			line-height: 1.6;
+		}
+
+		/* CTA Section */
+		.cta-section {
+			padding: 80px 24px;
+			text-align: center;
+			background: linear-gradient(180deg, transparent 0%, rgba(59, 130, 246, 0.05) 100%);
+		}
+
+		.cta-card {
+			max-width: 600px;
+			margin: 0 auto;
+			padding: 48px;
+			background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(168, 85, 247, 0.1));
+			border: 1px solid rgba(255,255,255,0.1);
+			border-radius: 24px;
+		}
+
+		.cta-card h3 {
+			font-size: 28px;
+			font-weight: 800;
+			margin-bottom: 16px;
+		}
+
+		.cta-card p {
+			color: rgba(255,255,255,0.7);
+			margin-bottom: 24px;
+			line-height: 1.6;
+		}
+
+		.cta-buttons {
+			display: flex;
+			gap: 12px;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		.cta-btn {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			padding: 14px 28px;
+			font-size: 15px;
+			font-weight: 600;
 			text-decoration: none;
-			font-weight: 500;
+			border-radius: 10px;
+			transition: all 0.3s;
 		}
-		.github-link a:hover { text-decoration: underline; }
+
+		.cta-btn.primary {
+			background: linear-gradient(135deg, #3b82f6, #a855f7);
+			color: #fff;
+		}
+
+		.cta-btn.primary:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 10px 30px rgba(168, 85, 247, 0.3);
+		}
+
+		.cta-btn.secondary {
+			background: rgba(255,255,255,0.1);
+			color: #fff;
+			border: 1px solid rgba(255,255,255,0.2);
+		}
+
+		.cta-btn.secondary:hover {
+			background: rgba(255,255,255,0.15);
+		}
+
+		/* Footer */
+		footer {
+			padding: 40px 24px;
+			text-align: center;
+			border-top: 1px solid rgba(255,255,255,0.1);
+		}
+
+		footer p {
+			color: rgba(255,255,255,0.5);
+			font-size: 14px;
+		}
+
+		footer a {
+			color: #a855f7;
+			text-decoration: none;
+		}
+
+		/* Scrollbar */
+		::-webkit-scrollbar { width: 8px; }
+		::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); }
+		::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 4px; }
+
+		/* Responsive */
+		@media (max-width: 640px) {
+			.stats { flex-direction: column; }
+			.cta-buttons { flex-direction: column; }
+			.feature-item { flex-direction: column; gap: 12px; }
+		}
 	</style>
 </head>
 <body>
+	<div class="bg-gradient"></div>
+	<div class="bg-glow"></div>
+
 	<nav class="nav">
 		<a href="index.html">Home</a>
 		<a href="index.html#about">About</a>
 		<a href="index.html#work">Work</a>
-		<a href="llms-generator">LLMs.txt</a>
+		<a href="llms-generator" class="active">LLMs.txt</a>
 		<a href="contact">Contact</a>
 	</nav>
-	
-	<div class="header">
-		<h1>LLMs.txt Generator</h1>
-		<p>Generate AI-readable documentation for any website</p>
-	</div>
 
-	<div class="container">
-		<div class="card">
+	<section class="hero">
+		<div class="badge">The New Standard for AI Visibility</div>
+		<h1>Generate <span class="gradient">llms.txt</span> Instantly</h1>
+		<p class="subtitle">
+			Help ChatGPT, Claude, Gemini & Perplexity understand and cite your content. 
+			The curated table of contents for AI—generate yours in seconds.
+		</p>
+	</section>
+
+	<section class="cards-section">
+		<div class="cards-grid">
+			<div class="card">
+				<div class="card-icon">📄</div>
+				<h3>What is llms.txt?</h3>
+				<p>A human-curated Markdown file at /llms.txt listing your most important pages with descriptions, so LLMs can understand your content at inference time.</p>
+			</div>
+			<div class="card">
+				<div class="card-icon">🎯</div>
+				<h3>Why It Matters for GEO</h3>
+				<p>Generative Engine Optimization is the new SEO. llms.txt helps AI systems cite and reference your content in AI-generated answers.</p>
+			</div>
+			<div class="card">
+				<div class="card-icon">🤖</div>
+				<h3>AI-First Discovery</h3>
+				<p>Unlike sitemaps (discovery) or robots.txt (access control), llms.txt is about curation—highlighting your best content for AI consumption.</p>
+			</div>
+			<div class="card">
+				<div class="card-icon">⚡</div>
+				<h3>Low Cost, High Potential</h3>
+				<p>While empirical studies are still emerging, llms.txt is a cheap experimental bet that's directionally aligned with the AI-first future.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="generator-section">
+		<div class="generator-card">
+			<div class="generator-header">
+				<h2>🚀 Generate Your llms.txt</h2>
+				<p>Enter any URL and get an AI-ready documentation file</p>
+			</div>
+
 			<form id="generateForm">
 				<div class="form-group">
-					<label for="urlInput">Website URL</label>
-					<input type="text" id="urlInput" placeholder="https://example.com" required>
+					<label>Website URL</label>
+					<div class="input-wrapper">
+						<input type="text" id="urlInput" placeholder="https://yoursite.com" required>
+					</div>
 				</div>
-				<button type="submit" class="btn" id="generateBtn">Generate llms.txt</button>
+				<button type="submit" class="btn-generate" id="generateBtn">
+					✨ Generate llms.txt
+				</button>
 			</form>
 
 			<div class="error" id="errorMessage"></div>
@@ -210,10 +639,10 @@
 				</div>
 				<div class="output">
 					<div class="output-header">
-						<span>llms.txt</span>
+						<span>📄 llms.txt</span>
 						<div class="output-actions">
-							<button onclick="copyOutput()">Copy</button>
-							<button onclick="downloadOutput()">Download</button>
+							<button onclick="copyOutput()">📋 Copy</button>
+							<button onclick="downloadOutput()">⬇️ Download</button>
 						</div>
 					</div>
 					<div class="output-content">
@@ -221,12 +650,65 @@
 					</div>
 				</div>
 			</div>
+		</div>
+	</section>
 
-			<div class="github-link">
-				<a href="https://github.com/arlenk2021/FreeLLMSTxTGenerator" target="_blank">⭐ View on GitHub</a>
+	<section class="context-section">
+		<div class="context-header">
+			<h2>Should SEOs Care About llms.txt?</h2>
+			<p>The emerging standard for AI-friendly content—here's what you need to know</p>
+		</div>
+
+		<div class="feature-list">
+			<div class="feature-item">
+				<div class="feature-icon">📊</div>
+				<div class="feature-content">
+					<h4>The Format in One Paragraph</h4>
+					<p>Lives at /llms.txt, uses Markdown, includes an H1 with your site name, optional blockquote summary, and H2 sections grouping URLs with human-readable descriptions. Think of it as a curated table of contents for AI.</p>
+				</div>
+			</div>
+			<div class="feature-item">
+				<div class="feature-icon">🔄</div>
+				<div class="feature-content">
+					<h4>How It Differs From robots.txt & Sitemaps</h4>
+					<p><strong>robots.txt</strong> controls access (what crawlers may NOT fetch). <strong>sitemap.xml</strong> supports discovery (lists all URLs). <strong>llms.txt</strong> is about curation—highlighting the most useful resources for LLMs in a human-structured way.</p>
+				</div>
+			</div>
+			<div class="feature-item">
+				<div class="feature-icon">📈</div>
+				<div class="feature-content">
+					<h4>Current Adoption Reality</h4>
+					<p>~10% penetration in large samples. Heavy concentration in AI tooling, API docs, and developer SaaS. Major consumer sites (Google, Meta, Amazon) show near-zero adoption. It's mostly a developer and SEO tool phenomenon—not yet a mainstream standard.</p>
+				</div>
+			</div>
+			<div class="feature-item">
+				<div class="feature-icon">🎲</div>
+				<div class="feature-content">
+					<h4>The Pragmatic Take</h4>
+					<p>Don't treat it as a must-have ranking factor. DO treat it as a low-effort experiment where tooling exists. A place to practice GEO thinking: curating your most important content for AI consumption.</p>
+				</div>
 			</div>
 		</div>
-	</div>
+	</section>
+
+	<section class="cta-section">
+		<div class="cta-card">
+			<h3>🌟 Open Source & Free Forever</h3>
+			<p>This tool is part of the FreeLLMSTxTGenerator project. Star it, fork it, and help build the future of AI-readable web content.</p>
+			<div class="cta-buttons">
+				<a href="https://github.com/arlenk2021/FreeLLMSTxTGenerator" target="_blank" class="cta-btn primary">
+					⭐ Star on GitHub
+				</a>
+				<a href="https://github.com/arlenk2021/FreeLLMSTxTGenerator/fork" target="_blank" class="cta-btn secondary">
+					🍴 Fork & Contribute
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<p>Built with ❤️ by <a href="/">Arlen Kumar</a> • <a href="https://github.com/arlenk2021/FreeLLMSTxTGenerator">GitHub</a></p>
+	</footer>
 
 	<script>
 		let currentOutput = '';
@@ -241,7 +723,7 @@
 			const url = document.getElementById('urlInput').value;
 			
 			btn.disabled = true;
-			btn.textContent = 'Generating...';
+			btn.textContent = '⏳ Crawling & Generating...';
 			results.style.display = 'none';
 			errorDiv.style.display = 'none';
 			
@@ -261,25 +743,29 @@
 					currentOutput = data.llms_txt;
 					document.getElementById('statPages').textContent = data.stats.pages_crawled;
 					const domain = new URL(data.stats.source_url).hostname.replace('www.', '');
-					document.getElementById('statDomain').textContent = domain;
+					document.getElementById('statDomain').textContent = domain.length > 15 ? domain.slice(0,12) + '...' : domain;
 					document.getElementById('outputContent').textContent = data.llms_txt;
 					results.style.display = 'block';
+					results.scrollIntoView({ behavior: 'smooth', block: 'start' });
 				} else {
-					errorDiv.textContent = data.error || 'Failed to generate';
+					errorDiv.textContent = data.error || 'Failed to generate. Please try again.';
 					errorDiv.style.display = 'block';
 				}
 			} catch (err) {
-				errorDiv.textContent = 'Error connecting to server. Please try again.';
+				errorDiv.textContent = 'Connection error. The server may be starting up—please try again in a moment.';
 				errorDiv.style.display = 'block';
 			} finally {
 				btn.disabled = false;
-				btn.textContent = 'Generate llms.txt';
+				btn.textContent = '✨ Generate llms.txt';
 			}
 		});
 
 		function copyOutput() {
-			navigator.clipboard.writeText(currentOutput);
-			alert('Copied to clipboard!');
+			navigator.clipboard.writeText(currentOutput).then(() => {
+				const btn = event.target;
+				btn.textContent = '✅ Copied!';
+				setTimeout(() => btn.textContent = '📋 Copy', 2000);
+			});
 		}
 
 		function downloadOutput() {
