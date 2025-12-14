@@ -7,31 +7,53 @@
 	<meta name="description" content="Get in touch with Arlen Kumar. Let's talk about GEO, AI visibility, and how Wrodium can help your brand get cited by AI.">
 	<link rel="stylesheet" href="styles.css">
 	<link rel="icon" href="favicon.svg" type="image/svg+xml">
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 	<style>
 		.contact-page {
 			min-height: 100vh;
 			display: flex;
 			align-items: center;
 			padding: 8rem 1.5rem 4rem;
+			position: relative;
+		}
+		
+		.contact-page::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 1000px;
+			height: 1000px;
+			background: radial-gradient(circle, rgba(249, 115, 22, 0.1) 0%, rgba(236, 72, 153, 0.05) 50%, transparent 70%);
+			pointer-events: none;
 		}
 		
 		.contact-page__container {
 			max-width: 800px;
 			margin: 0 auto;
 			width: 100%;
+			position: relative;
+			z-index: 1;
 		}
 		
 		.contact-page__title {
-			font-size: clamp(2.5rem, 6vw, 4rem);
+			font-family: var(--font-display);
+			font-size: clamp(3rem, 8vw, 5rem);
+			font-style: italic;
 			margin-bottom: 1.5rem;
 		}
 		
 		.contact-page__subtitle {
-			font-size: 1.25rem;
+			font-family: var(--font-display);
+			font-size: 1.375rem;
+			font-style: italic;
 			color: var(--color-text-secondary);
 			margin-bottom: 3rem;
 			max-width: 600px;
+			line-height: 1.5;
 		}
 		
 		.contact-options {
@@ -47,19 +69,26 @@
 			padding: 2rem;
 			background: var(--color-bg-secondary);
 			border: 1px solid var(--color-border);
-			border-radius: 12px;
+			border-radius: 20px;
 			transition: all var(--transition-base);
 			text-decoration: none;
 		}
 		
 		.contact-option:hover {
-			border-color: var(--color-accent);
-			transform: translateY(-2px);
-			box-shadow: var(--shadow-lg);
+			border-color: var(--color-sunset-orange);
+			transform: translateY(-4px);
+			box-shadow: var(--shadow-glow);
 		}
 		
 		.contact-option__icon {
-			font-size: 2rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 56px;
+			height: 56px;
+			background: var(--gradient-sunset-soft);
+			border-radius: 14px;
+			color: var(--color-sunset-orange);
 			flex-shrink: 0;
 		}
 		
@@ -68,8 +97,10 @@
 		}
 		
 		.contact-option__title {
-			font-size: 1.25rem;
+			font-family: var(--font-display);
+			font-size: 1.375rem;
 			font-weight: 600;
+			font-style: italic;
 			margin-bottom: 0.5rem;
 			color: var(--color-text);
 		}
@@ -81,19 +112,21 @@
 		}
 		
 		.contact-option__cta {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5rem;
 			font-size: 0.9375rem;
-			font-weight: 500;
-			color: var(--color-accent);
-		}
-		
-		.contact-option__cta::after {
-			content: ' →';
+			font-weight: 600;
+			background: var(--gradient-sunset);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
 		}
 		
 		.back-link {
 			display: inline-flex;
 			align-items: center;
-			gap: 0.5rem;
+			gap: 0.75rem;
 			color: var(--color-text-muted);
 			font-size: 0.9375rem;
 			margin-bottom: 2rem;
@@ -101,11 +134,12 @@
 		}
 		
 		.back-link:hover {
-			color: var(--color-accent);
+			color: var(--color-sunset-orange);
 		}
 		
-		.back-link::before {
-			content: '←';
+		.back-link .icon {
+			width: 20px;
+			height: 20px;
 		}
 	</style>
 </head>
@@ -141,45 +175,66 @@
 	<!-- Contact Page -->
 	<section class="contact-page">
 		<div class="contact-page__container">
-			<a href="index.html" class="back-link">Back to Home</a>
+			<a href="index.html" class="back-link">
+				<svg class="icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+				</svg>
+				Back to Home
+			</a>
 			
 			<h1 class="contact-page__title">Let's <span class="gradient-text">Talk</span></h1>
 			<p class="contact-page__subtitle">The window for AI visibility is open—but it won't stay open. If you want to be cited by ChatGPT, Perplexity, and Gemini, let's figure out how.</p>
 			
 			<div class="contact-options">
 				<a href="https://calendly.com/arlenkumar" target="_blank" rel="noopener noreferrer" class="contact-option">
-					<span class="contact-option__icon">📅</span>
+					<div class="contact-option__icon">
+						<svg class="icon icon--lg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+						</svg>
+					</div>
 					<div class="contact-option__content">
 						<h3 class="contact-option__title">Book a Call</h3>
 						<p class="contact-option__description">Schedule a 30-minute call to discuss your AI visibility strategy and how Wrodium can help.</p>
-						<span class="contact-option__cta">Schedule now</span>
+						<span class="contact-option__cta">Schedule now →</span>
 					</div>
 				</a>
 				
 				<a href="mailto:arlen@wrodium.com" class="contact-option">
-					<span class="contact-option__icon">✉️</span>
+					<div class="contact-option__icon">
+						<svg class="icon icon--lg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+						</svg>
+					</div>
 					<div class="contact-option__content">
 						<h3 class="contact-option__title">Email Me</h3>
 						<p class="contact-option__description">For partnerships, press inquiries, or if you just want to say hi.</p>
-						<span class="contact-option__cta">arlen@wrodium.com</span>
+						<span class="contact-option__cta">arlen@wrodium.com →</span>
 					</div>
 				</a>
 				
 				<a href="https://linkedin.com/in/arlenkumar" target="_blank" rel="noopener noreferrer" class="contact-option">
-					<span class="contact-option__icon">💼</span>
+					<div class="contact-option__icon">
+						<svg class="icon icon--lg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
+						</svg>
+					</div>
 					<div class="contact-option__content">
 						<h3 class="contact-option__title">LinkedIn</h3>
 						<p class="contact-option__description">Connect with me for professional updates and industry insights.</p>
-						<span class="contact-option__cta">Connect on LinkedIn</span>
+						<span class="contact-option__cta">Connect on LinkedIn →</span>
 					</div>
 				</a>
 				
 				<a href="https://twitter.com/arlenkumar" target="_blank" rel="noopener noreferrer" class="contact-option">
-					<span class="contact-option__icon">🐦</span>
+					<div class="contact-option__icon">
+						<svg class="icon icon--lg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+						</svg>
+					</div>
 					<div class="contact-option__content">
 						<h3 class="contact-option__title">Twitter / X</h3>
 						<p class="contact-option__description">Follow for thoughts on GEO, AI, and building in public.</p>
-						<span class="contact-option__cta">Follow @arlenkumar</span>
+						<span class="contact-option__cta">Follow @arlenkumar →</span>
 					</div>
 				</a>
 			</div>
