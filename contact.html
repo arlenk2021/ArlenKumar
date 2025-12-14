@@ -1,145 +1,215 @@
 <!DOCTYPE html>
-<html lang="en" class="contact-page">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<!-- Primary Meta Tags -->
-	<title>Contact Arlen Kumar - Schedule a Meeting | Wrodium Co-founder</title>
-	<meta name="title" content="Contact Arlen Kumar - Schedule a Meeting | Wrodium Co-founder">
-	<meta name="description" content="Schedule a meeting with Arlen Kumar, co-founder of Wrodium. Discuss AI search optimization, GEO strategies, and how to improve your brand's visibility in AI answer engines.">
-	<meta name="keywords" content="contact Arlen Kumar, schedule meeting, Wrodium, AI search consultation, GEO optimization, AI visibility">
-	<meta name="author" content="Arlen Kumar">
-	<meta name="robots" content="index, follow">
-	<link rel="canonical" href="https://arlenkumar.com/contact">
-	
-	<!-- Open Graph / Facebook -->
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://arlenkumar.com/contact">
-	<meta property="og:title" content="Contact Arlen Kumar - Schedule a Meeting | Wrodium Co-founder">
-	<meta property="og:description" content="Schedule a meeting with Arlen Kumar to discuss AI search optimization and GEO strategies for your brand.">
-	<meta property="og:image" content="https://arlenkumar.com/IMG_1887.jpg">
-	
-	<!-- Twitter -->
-	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="https://arlenkumar.com/contact">
-	<meta property="twitter:title" content="Contact Arlen Kumar - Schedule a Meeting | Wrodium Co-founder">
-	<meta property="twitter:description" content="Schedule a meeting with Arlen Kumar to discuss AI search optimization and GEO strategies.">
-	<meta property="twitter:image" content="https://arlenkumar.com/IMG_1887.jpg">
-	
-	<!-- Favicon -->
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-	
-	<!-- Additional SEO -->
-	<meta name="theme-color" content="#e55d87">
-	
-	<!-- GEO / AI Discovery -->
-	<link rel="alternate" type="text/plain" title="LLMs.txt" href="/llms.txt">
-	<meta name="ai-content-declaration" content="This website provides structured content for AI systems. See /llms.txt for curated information.">
-	
-	<!-- Stylesheet -->
+	<title>Contact — Arlen Kumar</title>
+	<meta name="description" content="Get in touch with Arlen Kumar. Let's talk about GEO, AI visibility, and how Wrodium can help your brand get cited by AI.">
 	<link rel="stylesheet" href="styles.css">
-	<script src="https://cdn.jsdelivr.net/npm/heroicons@2.0.18/24/outline/index.js" type="module"></script>
-	
-	<!-- Structured Data -->
-	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "ContactPage",
-		"name": "Contact Arlen Kumar",
-		"description": "Schedule a meeting with Arlen Kumar, co-founder of Wrodium",
-		"url": "https://arlenkumar.com/contact",
-		"mainEntity": {
-			"@type": "Person",
-			"name": "Arlen Kumar",
-			"jobTitle": "Co-founder",
-			"worksFor": {
-				"@type": "Organization",
-				"name": "Wrodium"
-			}
+	<link rel="icon" href="favicon.svg" type="image/svg+xml">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+	<style>
+		.contact-page {
+			min-height: 100vh;
+			display: flex;
+			align-items: center;
+			padding: 8rem 1.5rem 4rem;
 		}
-	}
-	</script>
+		
+		.contact-page__container {
+			max-width: 800px;
+			margin: 0 auto;
+			width: 100%;
+		}
+		
+		.contact-page__title {
+			font-size: clamp(2.5rem, 6vw, 4rem);
+			margin-bottom: 1.5rem;
+		}
+		
+		.contact-page__subtitle {
+			font-size: 1.25rem;
+			color: var(--color-text-secondary);
+			margin-bottom: 3rem;
+			max-width: 600px;
+		}
+		
+		.contact-options {
+			display: grid;
+			gap: 1.5rem;
+			margin-bottom: 4rem;
+		}
+		
+		.contact-option {
+			display: flex;
+			align-items: flex-start;
+			gap: 1.5rem;
+			padding: 2rem;
+			background: var(--color-bg-secondary);
+			border: 1px solid var(--color-border);
+			border-radius: 12px;
+			transition: all var(--transition-base);
+			text-decoration: none;
+		}
+		
+		.contact-option:hover {
+			border-color: var(--color-accent);
+			transform: translateY(-2px);
+			box-shadow: var(--shadow-lg);
+		}
+		
+		.contact-option__icon {
+			font-size: 2rem;
+			flex-shrink: 0;
+		}
+		
+		.contact-option__content {
+			flex: 1;
+		}
+		
+		.contact-option__title {
+			font-size: 1.25rem;
+			font-weight: 600;
+			margin-bottom: 0.5rem;
+			color: var(--color-text);
+		}
+		
+		.contact-option__description {
+			font-size: 0.9375rem;
+			color: var(--color-text-muted);
+			margin-bottom: 0.75rem;
+		}
+		
+		.contact-option__cta {
+			font-size: 0.9375rem;
+			font-weight: 500;
+			color: var(--color-accent);
+		}
+		
+		.contact-option__cta::after {
+			content: ' →';
+		}
+		
+		.back-link {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5rem;
+			color: var(--color-text-muted);
+			font-size: 0.9375rem;
+			margin-bottom: 2rem;
+			transition: color var(--transition-fast);
+		}
+		
+		.back-link:hover {
+			color: var(--color-accent);
+		}
+		
+		.back-link::before {
+			content: '←';
+		}
+	</style>
 </head>
-<body class="contact-page">
-	<canvas></canvas>
-	<header class="main-header">
-		<div class="main_nav">
-			<div class="container">
-				<div class="mobile-toggle">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-				<nav>
-					<ul>
-						<li><a class="smoothscroll" href="index.html#header">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="nav-icon">
-								<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-							</svg>
-							<span>Home</span>
-						</a></li>
-						<li><a class="smoothscroll" href="index.html#about">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="nav-icon">
-								<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-							</svg>
-							<span>About</span>
-						</a></li>
-						<li><a class="smoothscroll" href="index.html#skills">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="nav-icon">
-								<path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
-							</svg>
-							<span>Services</span>
-						</a></li>
-						<li><a class="smoothscroll" href="index.html#work">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="nav-icon">
-								<path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 .414-.336.75-.75.75h-4.5a.75.75 0 01-.75-.75v-4.25m0 0l4.5-4.5m-4.5 4.5l-4.5 4.5m0 0l4.5-4.5m4.5 4.5L15.75 18.4" />
-							</svg>
-							<span>Work</span>
-						</a></li>
-						<li><a href="llms-generator">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="nav-icon">
-								<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
-							</svg>
-							<span>LLMs.txt</span>
-						</a></li>
-						<li><a class="smoothscroll" href="contact">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="nav-icon">
-								<path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-							</svg>
-							<span>Contact</span>
-						</a></li>
-					</ul>
-				</nav>
+<body>
+	<!-- Navigation -->
+	<nav class="nav scrolled">
+		<div class="nav__container">
+			<a href="index.html" class="nav__logo">Arlen Kumar</a>
+			<div class="nav__links">
+				<a href="index.html#proof" class="nav__link">Proof</a>
+				<a href="index.html#about" class="nav__link">About</a>
+				<a href="index.html#wrodium" class="nav__link">Wrodium</a>
+				<a href="index.html#research" class="nav__link">Research</a>
+				<a href="contact.html" class="nav__link nav__link--cta">Let's Talk</a>
 			</div>
+			<button class="nav__toggle" aria-label="Toggle menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
 		</div>
-	</header>
+	</nav>
 
-	<section class="contact-section">
-		<div class="contact-content">
-			<h1>Let's Create Together</h1>
-			<p class="contact-intro">Schedule a time to connect and explore how we can work together.</p>
+	<!-- Mobile Menu -->
+	<div class="mobile-menu">
+		<a href="index.html#proof" class="mobile-menu__link">Proof</a>
+		<a href="index.html#about" class="mobile-menu__link">About</a>
+		<a href="index.html#wrodium" class="mobile-menu__link">Wrodium</a>
+		<a href="index.html#research" class="mobile-menu__link">Research</a>
+		<a href="contact.html" class="mobile-menu__link mobile-menu__link--cta">Let's Talk</a>
+	</div>
+
+	<!-- Contact Page -->
+	<section class="contact-page">
+		<div class="contact-page__container">
+			<a href="index.html" class="back-link">Back to Home</a>
 			
-			<div class="calendar-embed">
-				<iframe 
-					src="https://cal.com/arlen-kumar-le6mo6/15min?overlayCalendar=true" 
-					frameborder="0" 
-					allowtransparency="true"
-					scrolling="yes"
-					style="width:100%;height:100%;border:none;"
-					title="Schedule a 15-minute meeting with Arlen Kumar - Wrodium Co-founder"
-					aria-label="Cal.com booking calendar for scheduling a meeting with Arlen Kumar">
-				</iframe>
+			<h1 class="contact-page__title">Let's <span class="gradient-text">Talk</span></h1>
+			<p class="contact-page__subtitle">The window for AI visibility is open—but it won't stay open. If you want to be cited by ChatGPT, Perplexity, and Gemini, let's figure out how.</p>
+			
+			<div class="contact-options">
+				<a href="https://calendly.com/arlenkumar" target="_blank" rel="noopener noreferrer" class="contact-option">
+					<span class="contact-option__icon">📅</span>
+					<div class="contact-option__content">
+						<h3 class="contact-option__title">Book a Call</h3>
+						<p class="contact-option__description">Schedule a 30-minute call to discuss your AI visibility strategy and how Wrodium can help.</p>
+						<span class="contact-option__cta">Schedule now</span>
+					</div>
+				</a>
+				
+				<a href="mailto:arlen@wrodium.com" class="contact-option">
+					<span class="contact-option__icon">✉️</span>
+					<div class="contact-option__content">
+						<h3 class="contact-option__title">Email Me</h3>
+						<p class="contact-option__description">For partnerships, press inquiries, or if you just want to say hi.</p>
+						<span class="contact-option__cta">arlen@wrodium.com</span>
+					</div>
+				</a>
+				
+				<a href="https://linkedin.com/in/arlenkumar" target="_blank" rel="noopener noreferrer" class="contact-option">
+					<span class="contact-option__icon">💼</span>
+					<div class="contact-option__content">
+						<h3 class="contact-option__title">LinkedIn</h3>
+						<p class="contact-option__description">Connect with me for professional updates and industry insights.</p>
+						<span class="contact-option__cta">Connect on LinkedIn</span>
+					</div>
+				</a>
+				
+				<a href="https://twitter.com/arlenkumar" target="_blank" rel="noopener noreferrer" class="contact-option">
+					<span class="contact-option__icon">🐦</span>
+					<div class="contact-option__content">
+						<h3 class="contact-option__title">Twitter / X</h3>
+						<p class="contact-option__description">Follow for thoughts on GEO, AI, and building in public.</p>
+						<span class="contact-option__cta">Follow @arlenkumar</span>
+					</div>
+				</a>
 			</div>
 		</div>
 	</section>
 
-	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="navigation.js"></script>
-	<script src="canvas-animation.js"></script>
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="footer__container">
+			<p class="footer__tagline">Built by <strong>Arlen Kumar</strong>. Co-founded with <strong>Leanid Palkhouski</strong>. Backed by <strong>Berkeley SkyDeck</strong>. Fueled by the belief that AI should cite its sources.</p>
+			<div class="footer__links">
+				<a href="index.html">Home</a>
+				<a href="llms.txt">llms.txt</a>
+			</div>
+			<p class="footer__copyright">© 2024 Arlen Kumar</p>
+		</div>
+	</footer>
+
+	<script>
+		// Mobile menu toggle
+		const navToggle = document.querySelector('.nav__toggle');
+		const mobileMenu = document.querySelector('.mobile-menu');
+		
+		if (navToggle && mobileMenu) {
+			navToggle.addEventListener('click', () => {
+				navToggle.classList.toggle('active');
+				mobileMenu.classList.toggle('active');
+				document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+			});
+		}
+	</script>
 </body>
 </html>
-
