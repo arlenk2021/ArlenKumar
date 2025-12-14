@@ -42,20 +42,25 @@
 	<link rel="stylesheet" href="styles.css">
 	<script src="https://cdn.jsdelivr.net/npm/heroicons@2.0.18/24/outline/index.js" type="module"></script>
 	
-	<!-- Structured Data -->
+	<!-- Structured Data - Person -->
 	<script type="application/ld+json">
 	{
 		"@context": "https://schema.org",
 		"@type": "Person",
 		"name": "Arlen Kumar",
-		"jobTitle": "Co-founder",
+		"jobTitle": "Co-founder & CTO",
 		"worksFor": {
 			"@type": "Organization",
 			"name": "Wrodium",
 			"url": "https://www.winsearch.ai"
 		},
-		"description": "Co-founder of Wrodium, an AI content maintenance and GEO platform. Expert in machine learning, AI search optimization, and helping brands get cited by AI answer engines.",
+		"alumniOf": {
+			"@type": "CollegeOrUniversity",
+			"name": "UC Berkeley"
+		},
+		"description": "Serial entrepreneur and AI researcher. Co-founder of Wrodium, an AI content maintenance and GEO platform. Expert in machine learning, AI search optimization, and helping brands get cited by AI answer engines. Berkeley SkyDeck '24 backed.",
 		"url": "https://arlenkumar.com",
+		"image": "https://arlenkumar.com/IMG_1887.jpg",
 		"sameAs": [
 			"https://www.winsearch.ai"
 		],
@@ -64,8 +69,50 @@
 			"Generative Engine Optimization",
 			"Machine Learning",
 			"Content Optimization",
-			"AI Citations"
+			"AI Citations",
+			"ChatGPT",
+			"Perplexity",
+			"Gemini",
+			"Claude"
 		]
+	}
+	</script>
+	
+	<!-- Structured Data - Organization -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		"name": "Wrodium",
+		"url": "https://www.winsearch.ai",
+		"logo": "https://arlenkumar.com/favicon.svg",
+		"description": "Generative Engine Optimization platform that helps brands become the sources AI engines trust, cite, and recommend.",
+		"founder": [
+			{
+				"@type": "Person",
+				"name": "Arlen Kumar"
+			},
+			{
+				"@type": "Person",
+				"name": "Leanid Palkhouski"
+			}
+		],
+		"foundingDate": "2024"
+	}
+	</script>
+	
+	<!-- Structured Data - WebSite -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "WebSite",
+		"name": "Arlen Kumar",
+		"url": "https://arlenkumar.com",
+		"description": "Personal website of Arlen Kumar, Co-founder & CTO of Wrodium - the GEO platform for AI search visibility",
+		"publisher": {
+			"@type": "Person",
+			"name": "Arlen Kumar"
+		}
 	}
 	</script>
 </head>

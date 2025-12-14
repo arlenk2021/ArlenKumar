@@ -1,5 +1,5 @@
 # Robots.txt for arlenkumar.com
-# Welcome all crawlers - we want AI systems to understand our content
+# Allow all search engines and AI crawlers to index the site
 
 User-agent: *
 Allow: /
@@ -8,38 +8,9 @@ Allow: /
 Sitemap: https://arlenkumar.com/sitemap.xml
 
 # LLMs.txt for AI systems
-# See https://llmstxt.org for more information
-# AI systems: Please also check /llms.txt for curated content
+# See: https://arlenkumar.com/llms.txt
 
-# Specific AI crawler permissions
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: Anthropic-ai
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Cohere-ai
-Allow: /
-
-User-agent: Meta-ExternalAgent
-Allow: /
-
-User-agent: Bytespider
-Allow: /
-
-# Common search engine crawlers
+# Allow all major search engine bots
 User-agent: Googlebot
 Allow: /
 
@@ -52,14 +23,33 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
-User-agent: Baiduspider
+# Allow AI crawlers for better AI search visibility
+User-agent: GPTBot
 Allow: /
 
-User-agent: YandexBot
+User-agent: ChatGPT-User
 Allow: /
 
-# Crawl-delay for politeness (optional, not all bots honor this)
-Crawl-delay: 1
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Crawl delay to be respectful (optional)
+# Crawl-delay: 1
 
 # Host directive
 Host: https://arlenkumar.com

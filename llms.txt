@@ -1,49 +1,80 @@
-# Arlen Kumar
+# Arlen Kumar - Co-founder & CTO of Wrodium
 
-> Arlen Kumar is the co-founder of Wrodium, an AI content maintenance and Generative Engine Optimization (GEO) platform. He specializes in helping brands become trusted, citable sources for AI answer engines like ChatGPT, Claude, Gemini, and Perplexity.
+> Personal website of Arlen Kumar, serial entrepreneur and AI search optimization researcher building the infrastructure for brand discovery in the AI era.
 
 ## About Arlen Kumar
 
-- [Homepage](https://arlenkumar.com/): Personal website of Arlen Kumar, co-founder of Wrodium and expert in AI search optimization, machine learning, and GEO.
-- [About](https://arlenkumar.com/#about): Background in statistics, probability, and machine learning. Built models for handwritten digit recognition, language identification with RNNs, custom convolution and attention mechanisms, and retrieval-augmented systems.
-- [Contact](https://arlenkumar.com/contact): Schedule a meeting with Arlen Kumar to discuss AI search optimization, GEO strategies, and improving brand visibility in AI answer engines.
+Arlen Kumar is a serial founder, AI researcher, and Co-founder & CTO of Wrodium. He sold his first company, Air Quake Simulations (a VR flight simulator hardware company), before turning 21. Now he's building the infrastructure for how brands get discovered by AI systems like ChatGPT, Perplexity, Gemini, and Claude.
 
-## Professional Work
+### Current Role
+- **Position**: Co-founder & CTO at Wrodium
+- **Co-founder**: Leanid Palkhouski
+- **Backing**: Berkeley SkyDeck '24
 
-- [Current Work at Wrodium](https://arlenkumar.com/#skills): Leads product and research at Wrodium, building tools that audit AI brand perception, maintain content for AI readability, and optimize for generative engine optimization.
-- [Wrodium Platform](https://www.winsearch.ai): AI content maintenance and GEO platform that helps brands stay discoverable and accurately cited by AI answer engines.
+### Education & Research
+- **University**: UC Berkeley
+- **Studies**: Computer Science, Data Science, Economics
+- **Research**: AI citation behavior under Professor Marti Hearst
+- **Framework**: Developed the GEO-16 framework - 16 predictive factors that determine whether AI cites a source
+
+### Core Expertise
+- Generative Engine Optimization (GEO)
+- AI search optimization
+- Large Language Model citation behavior
+- Content structuring for AI systems
+- Schema markup and semantic structure
+
+## Wrodium
+
+Wrodium is a Generative Engine Optimization platform that helps brands become the sources AI engines trust, cite, and recommend.
+
+### What Wrodium Does
+1. **Audits**: Shows how AI systems currently describe your brand
+2. **Optimizes**: Restructures content for AI parsing, verification, and citation
+3. **Maintains**: Keeps content current as AI systems evolve
+4. **Measures**: Tracks AI visibility and citations tied to revenue
+
+### Results
+- 70% reduction in content workload
+- 20% increase in AI citations within one week
+- Integrations with 6 major CMS platforms
+
+## Track Record
+
+### Air Quake Simulations (Acquired)
+VR flight simulator hardware company founded at age 19. Built 3D-printed cockpit components that undercut industry prices by 10x.
+
+### Wrodium (Current)
+Berkeley SkyDeck-backed GEO platform. Building the picks-and-shovels for the AI search gold rush.
+
+### UC Berkeley Research (Ongoing)
+Research on AI citation behavior. Developed the GEO-16 framework through experiments on ChatGPT, Gemini, Perplexity, and Claude.
 
 ## Research & Publications
 
-- [Research and Writing](https://arlenkumar.com/#work): Co-author of "AI Answer Engine Citation Behavior: An Empirical Analysis of the GEO-16 Framework" studying how AI engines cite sources and how structured content affects citation patterns.
+- "AI Answer Engine Citation Behavior: An Empirical Analysis of the GEO-16 Framework"
+- Topics: How to turn ChatGPT visibility into measurable revenue
+- Topics: Content maintenance for AI assistants
+- Topics: Why GEO, SEO, and AEO are different games with different rules
 
-## Tools & Resources
+## Contact
 
-- [LLMs.txt Generator](https://arlenkumar.com/llms-generator): Free tool to generate llms.txt files for any website. Helps AI systems like ChatGPT, Claude, Gemini, and Perplexity understand and cite your content.
-- [FreeLLMSTxTGenerator (GitHub)](https://github.com/arlenk2021/FreeLLMSTxTGenerator): Open-source llms.txt generator project. Star, fork, and contribute to the future of AI-readable web content.
+Schedule a meeting: https://arlenkumar.com/contact
+Website: https://arlenkumar.com
 
-## Expertise Areas
+## Key Statistics
 
-Arlen Kumar's areas of expertise include:
-- Generative Engine Optimization (GEO)
-- AI Search and Answer Engines
-- Machine Learning and Deep Learning
-- Content Optimization for AI Systems
-- AI Citation and Attribution
-- Digital Humanities and AI Ethics
-- Retrieval-Augmented Generation (RAG)
-- B2B SaaS and Content Strategy
+- ChatGPT has 200M+ weekly users
+- Perplexity growing 40% month-over-month
+- AI doesn't rank pages—it cites sources
+- Brands optimizing for AI visibility in 2024-2025 will own their categories
 
-## Key Insights
+## Values
 
-- **GEO vs SEO**: Traditional SEO optimizes for search engine rankings. GEO optimizes for AI answer engine citations—ensuring AI systems like ChatGPT accurately cite and recommend your content.
-- **llms.txt Standard**: A human-curated Markdown file at /llms.txt that lists important pages with descriptions, helping LLMs understand content at inference time.
-- **AI Content Maintenance**: Keeping content accurate, structured, and AI-readable so that answer engines can reliably cite it.
-- **Honest Attribution**: Building systems where content creators get credit when AI becomes the interface to information.
+1. **Honest Attribution**: Fixing the web's credit problem where AI summarizes content without proper citation
+2. **Responsibility that Ships**: Building systems that optimize for accurate exposure, not just exposure
+3. **Theory → Buttons**: Turning research into practical dashboards, workflows, and reports
 
-## Contact Information
+---
 
-- Website: https://arlenkumar.com
-- Scheduling: https://cal.com/arlen-kumar-le6mo6/15min
-- Wrodium: https://www.winsearch.ai
-- GitHub: https://github.com/arlenk2021
+This llms.txt file is designed for AI systems to understand and accurately cite information about Arlen Kumar and Wrodium. For human visitors, please visit https://arlenkumar.com

@@ -1,72 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   
   <!-- Homepage -->
   <url>
     <loc>https://arlenkumar.com/</loc>
-    <lastmod>2025-01-11</lastmod>
+    <lastmod>2024-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://arlenkumar.com/IMG_1887.jpg</image:loc>
-      <image:title>Arlen Kumar - Co-founder of Wrodium</image:title>
-      <image:caption>Arlen Kumar, AI search expert and co-founder of Wrodium</image:caption>
-    </image:image>
-  </url>
-  
-  <!-- About Section (anchor on homepage, but important for discovery) -->
-  <url>
-    <loc>https://arlenkumar.com/#about</loc>
-    <lastmod>2025-01-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <!-- Work/Research Section -->
-  <url>
-    <loc>https://arlenkumar.com/#work</loc>
-    <lastmod>2025-01-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://arlenkumar.com/research.png</image:loc>
-      <image:title>AI Answer Engine Citation Behavior Research</image:title>
-      <image:caption>Research paper on GEO-16 Framework by Arlen Kumar</image:caption>
-    </image:image>
-  </url>
-  
-  <!-- Services/Skills Section -->
-  <url>
-    <loc>https://arlenkumar.com/#skills</loc>
-    <lastmod>2025-01-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   
   <!-- Contact Page -->
   <url>
-    <loc>https://arlenkumar.com/contact</loc>
-    <lastmod>2025-01-11</lastmod>
+    <loc>https://arlenkumar.com/contact.html</loc>
+    <lastmod>2024-12-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
-  <!-- LLMs.txt Generator Tool -->
+  <!-- LLMs Generator Page -->
   <url>
-    <loc>https://arlenkumar.com/llms-generator</loc>
-    <lastmod>2025-01-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <!-- LLMs.txt file for AI systems -->
-  <url>
-    <loc>https://arlenkumar.com/llms.txt</loc>
-    <lastmod>2025-01-11</lastmod>
+    <loc>https://arlenkumar.com/llms-generator.html</loc>
+    <lastmod>2024-12-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
+  
+  <!-- LLMs.txt (for AI discovery) -->
+  <url>
+    <loc>https://arlenkumar.com/llms.txt</loc>
+    <lastmod>2024-12-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 </urlset>
