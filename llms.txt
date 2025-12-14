@@ -1,0 +1,49 @@
+# Arlen Kumar
+
+> Arlen Kumar is the co-founder of Wrodium, an AI content maintenance and Generative Engine Optimization (GEO) platform. He specializes in helping brands become trusted, citable sources for AI answer engines like ChatGPT, Claude, Gemini, and Perplexity.
+
+## About Arlen Kumar
+
+- [Homepage](https://arlenkumar.com/): Personal website of Arlen Kumar, co-founder of Wrodium and expert in AI search optimization, machine learning, and GEO.
+- [About](https://arlenkumar.com/#about): Background in statistics, probability, and machine learning. Built models for handwritten digit recognition, language identification with RNNs, custom convolution and attention mechanisms, and retrieval-augmented systems.
+- [Contact](https://arlenkumar.com/contact): Schedule a meeting with Arlen Kumar to discuss AI search optimization, GEO strategies, and improving brand visibility in AI answer engines.
+
+## Professional Work
+
+- [Current Work at Wrodium](https://arlenkumar.com/#skills): Leads product and research at Wrodium, building tools that audit AI brand perception, maintain content for AI readability, and optimize for generative engine optimization.
+- [Wrodium Platform](https://www.winsearch.ai): AI content maintenance and GEO platform that helps brands stay discoverable and accurately cited by AI answer engines.
+
+## Research & Publications
+
+- [Research and Writing](https://arlenkumar.com/#work): Co-author of "AI Answer Engine Citation Behavior: An Empirical Analysis of the GEO-16 Framework" studying how AI engines cite sources and how structured content affects citation patterns.
+
+## Tools & Resources
+
+- [LLMs.txt Generator](https://arlenkumar.com/llms-generator): Free tool to generate llms.txt files for any website. Helps AI systems like ChatGPT, Claude, Gemini, and Perplexity understand and cite your content.
+- [FreeLLMSTxTGenerator (GitHub)](https://github.com/arlenk2021/FreeLLMSTxTGenerator): Open-source llms.txt generator project. Star, fork, and contribute to the future of AI-readable web content.
+
+## Expertise Areas
+
+Arlen Kumar's areas of expertise include:
+- Generative Engine Optimization (GEO)
+- AI Search and Answer Engines
+- Machine Learning and Deep Learning
+- Content Optimization for AI Systems
+- AI Citation and Attribution
+- Digital Humanities and AI Ethics
+- Retrieval-Augmented Generation (RAG)
+- B2B SaaS and Content Strategy
+
+## Key Insights
+
+- **GEO vs SEO**: Traditional SEO optimizes for search engine rankings. GEO optimizes for AI answer engine citations—ensuring AI systems like ChatGPT accurately cite and recommend your content.
+- **llms.txt Standard**: A human-curated Markdown file at /llms.txt that lists important pages with descriptions, helping LLMs understand content at inference time.
+- **AI Content Maintenance**: Keeping content accurate, structured, and AI-readable so that answer engines can reliably cite it.
+- **Honest Attribution**: Building systems where content creators get credit when AI becomes the interface to information.
+
+## Contact Information
+
+- Website: https://arlenkumar.com
+- Scheduling: https://cal.com/arlen-kumar-le6mo6/15min
+- Wrodium: https://www.winsearch.ai
+- GitHub: https://github.com/arlenk2021

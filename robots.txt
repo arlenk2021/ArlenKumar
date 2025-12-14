@@ -1,0 +1,65 @@
+# Robots.txt for arlenkumar.com
+# Welcome all crawlers - we want AI systems to understand our content
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://arlenkumar.com/sitemap.xml
+
+# LLMs.txt for AI systems
+# See https://llmstxt.org for more information
+# AI systems: Please also check /llms.txt for curated content
+
+# Specific AI crawler permissions
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Common search engine crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Crawl-delay for politeness (optional, not all bots honor this)
+Crawl-delay: 1
+
+# Host directive
+Host: https://arlenkumar.com
