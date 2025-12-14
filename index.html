@@ -7,7 +7,10 @@
 	<meta name="description" content="Building the infrastructure for how brands get discovered in the AI era. Co-founder & CTO of Wrodium — the GEO platform that turns your content into what ChatGPT, Perplexity, and Gemini actually cite.">
 	<link rel="stylesheet" href="styles.css">
 	<link rel="icon" href="favicon.svg" type="image/svg+xml">
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+	<!-- Premium Typography -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 	<!-- Navigation -->
@@ -19,7 +22,8 @@
 				<a href="#about" class="nav__link">About</a>
 				<a href="#wrodium" class="nav__link">Wrodium</a>
 				<a href="#research" class="nav__link">Research</a>
-				<a href="contact.html" class="nav__link nav__link--cta">Let's Talk</a>
+				<a href="llms-generator.html" class="nav__link">LLMs.txt</a>
+				<a href="https://cal.com/arlen-kumar-le6mo6/15min" target="_blank" rel="noopener" class="nav__link nav__link--cta">Let's Talk</a>
 			</div>
 			<button class="nav__toggle" aria-label="Toggle menu">
 				<span></span>
@@ -35,24 +39,50 @@
 		<a href="#about" class="mobile-menu__link">About</a>
 		<a href="#wrodium" class="mobile-menu__link">Wrodium</a>
 		<a href="#research" class="mobile-menu__link">Research</a>
-		<a href="contact.html" class="mobile-menu__link mobile-menu__link--cta">Let's Talk</a>
+		<a href="llms-generator.html" class="mobile-menu__link">LLMs.txt</a>
+		<a href="https://cal.com/arlen-kumar-le6mo6/15min" target="_blank" rel="noopener" class="mobile-menu__link mobile-menu__link--cta">Let's Talk</a>
 	</div>
 
 	<!-- Hero Section -->
 	<section class="hero">
 		<div class="hero__container">
 			<div class="hero__content">
-				<p class="hero__eyebrow">Co-founder & CTO of Wrodium</p>
+				<p class="hero__eyebrow">
+					<svg class="icon icon--sm" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+					</svg>
+					Co-founder & CTO of Wrodium
+				</p>
 				<h1 class="hero__title">I'm <span class="gradient-text">Arlen Kumar</span></h1>
 				<p class="hero__subtitle">I sold my first company before I could legally drink. Now I'm building the infrastructure for how brands get discovered in the AI era.</p>
 				<p class="hero__description">The GEO platform that turns your content into what ChatGPT, Perplexity, and Gemini actually cite.</p>
 				<div class="hero__badges">
-					<span class="badge">Berkeley SkyDeck '24</span>
-					<span class="badge">UC Berkeley</span>
-					<span class="badge">Previous Exit: Air Quake Simulations</span>
+					<span class="badge">
+						<svg class="icon icon--sm" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+						</svg>
+						Berkeley SkyDeck '24
+					</span>
+					<span class="badge">
+						<svg class="icon icon--sm" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+						</svg>
+						UC Berkeley
+					</span>
+					<span class="badge">
+						<svg class="icon icon--sm" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+						</svg>
+						Previous Exit: Air Quake Simulations
+					</span>
 				</div>
 				<div class="hero__cta">
-					<a href="contact.html" class="btn btn--primary">Book a Call</a>
+					<a href="https://cal.com/arlen-kumar-le6mo6/15min" target="_blank" rel="noopener" class="btn btn--primary">
+						<svg class="icon icon--sm" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+						</svg>
+						Book a Call
+					</a>
 					<a href="#proof" class="btn btn--secondary">See the Proof</a>
 				</div>
 			</div>
@@ -71,28 +101,44 @@
 	<section class="credibility">
 		<div class="credibility__container">
 			<div class="credibility__item">
-				<span class="credibility__icon">🎓</span>
+				<div class="credibility__icon">
+					<svg class="icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+					</svg>
+				</div>
 				<div class="credibility__text">
 					<strong>UC Berkeley</strong>
 					<span>CS, Data Science, Economics</span>
 				</div>
 			</div>
 			<div class="credibility__item">
-				<span class="credibility__icon">🔬</span>
+				<div class="credibility__icon">
+					<svg class="icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 0-6.23.693L5 14.5m14.8.8 1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0 1 12 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
+					</svg>
+				</div>
 				<div class="credibility__text">
 					<strong>Research</strong>
 					<span>Under Prof. Marti Hearst</span>
 				</div>
 			</div>
 			<div class="credibility__item">
-				<span class="credibility__icon">🚀</span>
+				<div class="credibility__icon">
+					<svg class="icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+					</svg>
+				</div>
 				<div class="credibility__text">
 					<strong>Berkeley SkyDeck</strong>
 					<span>Backed</span>
 				</div>
 			</div>
 			<div class="credibility__item">
-				<span class="credibility__icon">💰</span>
+				<div class="credibility__icon">
+					<svg class="icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+					</svg>
+				</div>
 				<div class="credibility__text">
 					<strong>Previous Exit</strong>
 					<span>Air Quake Simulations (acquired)</span>
@@ -177,22 +223,38 @@
 			
 			<div class="wrodium__features">
 				<div class="feature">
-					<div class="feature__icon">🔍</div>
+					<div class="feature__icon">
+						<svg class="icon icon--xl" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+						</svg>
+					</div>
 					<h4 class="feature__title">Audits</h4>
 					<p class="feature__description">We show you exactly how AI systems currently describe your brand. (Spoiler: it's probably wrong or incomplete.)</p>
 				</div>
 				<div class="feature">
-					<div class="feature__icon">⚡</div>
+					<div class="feature__icon">
+						<svg class="icon icon--xl" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
+						</svg>
+					</div>
 					<h4 class="feature__title">Optimizes</h4>
 					<p class="feature__description">We restructure your content so AI engines can parse, verify, and cite it. Schema markup, semantic structure, fact-verification layers—the boring stuff that actually matters.</p>
 				</div>
 				<div class="feature">
-					<div class="feature__icon">🔄</div>
+					<div class="feature__icon">
+						<svg class="icon icon--xl" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+						</svg>
+					</div>
 					<h4 class="feature__title">Maintains</h4>
 					<p class="feature__description">AI changes fast. We keep your content current so you don't drift into hallucination territory.</p>
 				</div>
 				<div class="feature">
-					<div class="feature__icon">📊</div>
+					<div class="feature__icon">
+						<svg class="icon icon--xl" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+						</svg>
+					</div>
 					<h4 class="feature__title">Measures</h4>
 					<p class="feature__description">We track AI visibility and citations so you can tie "ChatGPT mentioned us" to actual revenue.</p>
 				</div>
@@ -256,14 +318,29 @@
 			<h2 class="section-title">What I Care About</h2>
 			<div class="values__grid">
 				<div class="value-card">
+					<div class="value-card__icon">
+						<svg class="icon icon--lg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+						</svg>
+					</div>
 					<h3 class="value-card__title">Honest Attribution</h3>
 					<p class="value-card__description">The web has a credit problem. People who create accurate, useful content get erased when AI summarizes them into a paragraph with no link. I want to fix that—better structure, better standards, better tracking for how AI systems cite sources.</p>
 				</div>
 				<div class="value-card">
+					<div class="value-card__icon">
+						<svg class="icon icon--lg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+						</svg>
+					</div>
 					<h3 class="value-card__title">Responsibility that Ships</h3>
 					<p class="value-card__description">I've spent years studying how AI systems erase or misrepresent people. That's not just an ethical concern—it's a product concern. If your AI visibility strategy gets you cited for the wrong thing, you've made your problem worse. I build systems that optimize for accurate exposure, not just exposure.</p>
 				</div>
 				<div class="value-card">
+					<div class="value-card__icon">
+						<svg class="icon icon--lg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+						</svg>
+					</div>
 					<h3 class="value-card__title">Theory → Buttons</h3>
 					<p class="value-card__description">I like research. But I like shipping more. The best part of Wrodium is turning abstract concepts like "generative engine optimization" into dashboards, workflows, and reports that marketers and founders actually use.</p>
 				</div>
@@ -311,7 +388,12 @@
 			<h2 class="cta__title">The window is open. <span class="muted">It won't stay open.</span></h2>
 			<p class="cta__text">The brands that figure out AI visibility in 2024-2025 will own their categories for years. Everyone else will pay to catch up.</p>
 			<p class="cta__emphasis">If you want to be in the first group, let's talk.</p>
-			<a href="contact.html" class="btn btn--primary btn--large">Book a Call with Me →</a>
+		<a href="https://cal.com/arlen-kumar-le6mo6/15min" target="_blank" rel="noopener" class="btn btn--primary btn--large">
+			<svg class="icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+			</svg>
+			Book a Call with Me
+		</a>
 		</div>
 	</section>
 
@@ -325,10 +407,11 @@
 	<footer class="footer">
 		<div class="footer__container">
 			<p class="footer__tagline">Built by <strong>Arlen Kumar</strong>. Co-founded with <strong>Leanid Palkhouski</strong>. Backed by <strong>Berkeley SkyDeck</strong>. Fueled by the belief that AI should cite its sources.</p>
-			<div class="footer__links">
-				<a href="contact.html">Contact</a>
-				<a href="llms.txt">llms.txt</a>
-			</div>
+		<div class="footer__links">
+			<a href="https://cal.com/arlen-kumar-le6mo6/15min" target="_blank" rel="noopener">Contact</a>
+			<a href="llms-generator.html">LLMs.txt Generator</a>
+			<a href="llms.txt">llms.txt</a>
+		</div>
 			<p class="footer__copyright">© 2024 Arlen Kumar</p>
 		</div>
 	</footer>
