@@ -666,11 +666,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .testimonial-card__avatar img {
-	width: 64px;
-	height: 64px;
+	width: 48px;
+	height: 48px;
 	border-radius: 50%;
 	object-fit: cover;
-	border: 3px solid var(--color-border);
+	border: 2px solid var(--color-border);
 	transition: border-color var(--transition-base);
 }
 
@@ -690,6 +690,12 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 600;
 	font-style: italic;
 	color: var(--color-text);
+	text-decoration: none;
+	transition: color var(--transition-fast);
+}
+
+a.testimonial-card__name:hover {
+	color: var(--color-sunset-orange);
 }
 
 .testimonial-card__title {
@@ -784,8 +790,8 @@ h1, h2, h3, h4, h5, h6 {
 	}
 	
 	.testimonial-card__avatar img {
-		width: 56px;
-		height: 56px;
+		width: 44px;
+		height: 44px;
 	}
 }
 
